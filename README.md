@@ -1,4 +1,4 @@
-<h1 align="left">Repositorio para Trabajo Final JAVA</h1>
+<h1 align="left">Repositorio para Trabajo Final</h1>
 
 ###
 
@@ -10,7 +10,7 @@
 
 ###
 
-<h2 align="left">El lenguaje usado fue JAVA</h2>
+<h2 align="left">El lenguaje de programacion usado fue JAVA</h2>
 
 ###
 
