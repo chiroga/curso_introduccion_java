@@ -12,7 +12,6 @@ public class Main {
 
         Menu_Base menuBase = new Menu_Base();
 
-
         int opcion;
         String nombre;
         String nombreFormateado;
@@ -30,29 +29,20 @@ public class Main {
         String justifUsoFormateada;
         int nivelArma;
         boolean tieneSello;
-
-
         int posicionPolicia;
         int atributoPolicia;
-
         int atributoArma;
         int posicionArma;
-
         int tipoArma;
-
         int comparaArma1;
         int comparaArma2;
 
         System.out.println("Bienvenido al Sistema de Gestion de Armas para Policias de Tres de Febrero");
 
         do {
-
             menuBase.menu_inicial();
-
             opcion = sc.nextInt();
-
             String saltoDeLinea = sc.nextLine();
-
             switch (opcion) {
                 case 1:
                     System.out.println("ALTA POLICIA");
