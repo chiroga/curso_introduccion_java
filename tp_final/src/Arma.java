@@ -4,17 +4,19 @@ abstract class Arma {
     private String marca;
     private int calibre;
     private String estado;
+    private int legajoAsociado;
 
     public boolean enCondicion(){
         return false;
     }
 
-    public Arma(String marca, int cantMuniciones, double alcance, int calibre, String estado) {
+    public Arma(String marca, int cantMuniciones, double alcance, int calibre, String estado, int legajoAsociado) {
         this.cantMuniciones = cantMuniciones;
         this.alcance = alcance;
         this.marca = marca;
         this.calibre = calibre;
         this.estado = estado;
+        this.legajoAsociado = legajoAsociado;
     }
 
     public int getCantMuniciones() {
@@ -55,5 +57,13 @@ abstract class Arma {
 
     public void setEstado(String estado) {
         this.estado = estado;
+    }
+
+    public int getLegajoAsociado() {
+        return legajoAsociado;
+    }
+
+    public void setLegajoAsociado(int legajoAsociado) {
+        this.legajoAsociado = legajoAsociado;
     }
 }

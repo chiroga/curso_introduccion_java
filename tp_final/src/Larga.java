@@ -3,8 +3,8 @@ public class Larga extends Arma implements Comparable {
     private int nivelArma;
     private boolean tieneSello;
 
-    public Larga(String marca, int cantMuniciones, double alcance, int calibre, String estado, String justifUso, int nivelArma, boolean tieneSello) {
-        super(marca, cantMuniciones, alcance, calibre, estado);
+    public Larga(String marca, int cantMuniciones, double alcance, int calibre, String estado, String justifUso, int nivelArma, boolean tieneSello, int legajoAsociado) {
+        super(marca, cantMuniciones, alcance, calibre, estado, legajoAsociado);
         this.justifUso = justifUso;
         this.nivelArma = nivelArma;
         this.tieneSello = tieneSello;
