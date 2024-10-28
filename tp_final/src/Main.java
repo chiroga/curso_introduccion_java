@@ -412,7 +412,7 @@ public class Main {
     public static void mostrarArmasCortas(ArrayList<Corta> armascortas) {
         System.out.println("Lista de Armas Cortas");
         System.out.println("------------------------");
-        System.out.println("Posicion - Marca - CantMuniciones - Alcance - Calibre - Estado - Policia Asociado - esAutomatica");
+        System.out.println("Posicion - Marca - CantMuniciones - Alcance (mts) - Calibre (mm) - Estado - Policia Asociado (legajo) - esAutomatica");
         for (int i = 0; i < armascortas.size(); i++) {
             System.out.println(i + " " + armascortas.get(i).getMarca() + " " + armascortas.get(i).getCantMuniciones() + " " + armascortas.get(i).getAlcance() + " " + armascortas.get(i).getCalibre() + " " + armascortas.get(i).getEstado() + " " + armascortas.get(i).getLegajoAsociado() + " " + armascortas.get(i).isEsAutomatica());
         }
@@ -421,7 +421,7 @@ public class Main {
     public static void mostrarArmasLargas(ArrayList<Larga> armaslargas) {
         System.out.println("Lista de Armas Largas");
         System.out.println("------------------------");
-        System.out.println("Posicion - Marca - CantMuniciones - Alcance - Calibre - Estado - Policia Asociado - Justificacion Uso - Nivel Arma - TieneSello");
+        System.out.println("Posicion - Marca - CantMuniciones - Alcance (mts) - Calibre (mm) - Estado - Policia Asociado (legajo) - Justificacion Uso - Nivel Arma - TieneSello");
         for (int i = 0; i < armaslargas.size(); i++) {
             System.out.println(i + " " + armaslargas.get(i).getMarca() + " " + armaslargas.get(i).getCantMuniciones() + " " + armaslargas.get(i).getAlcance() + " " + armaslargas.get(i).getCalibre() + " " + armaslargas.get(i).getEstado() + " " + armaslargas.get(i).getLegajoAsociado() + " " + armaslargas.get(i).getJustifUso() + " " + armaslargas.get(i).getNivelArma() + " " + armaslargas.get(i).isTieneSello());
         }
@@ -430,7 +430,7 @@ public class Main {
     public static void validarArmasCortas(ArrayList<Corta> armascortas) {
         System.out.println("Armas Cortas en condiciones de ser usadas");
         System.out.println("------------------------");
-        System.out.println("Posicion - Marca - CantMuniciones - Alcance - Calibre - Estado - Policia Asociado - esAutomatica");
+        System.out.println("Posicion - Marca - CantMuniciones - Alcance (mts) - Calibre (mm) - Estado - Policia Asociado (legajo) - esAutomatica");
         for (int i = 0; i < armascortas.size(); i++) {
             if (armascortas.get(i).getEstado().equals("USO") && armascortas.get(i).getCalibre() >= 9) {
                 System.out.println(i + " " + armascortas.get(i).getMarca() + " " + armascortas.get(i).getCantMuniciones() + " " + armascortas.get(i).getAlcance() + " " + armascortas.get(i).getCalibre() + " " + armascortas.get(i).getEstado() + " " + armascortas.get(i).getLegajoAsociado() + " " + armascortas.get(i).isEsAutomatica());
@@ -441,7 +441,7 @@ public class Main {
     public static void validarArmasLargas(ArrayList<Larga> armaslargas) {
         System.out.println("Armas Largas en condiciones de ser usadas");
         System.out.println("------------------------");
-        System.out.println("Posicion - Marca - CantMuniciones - Alcance - Calibre - Estado - Policia Asociado - Justificacion Uso - Nivel Arma - TieneSello");
+        System.out.println("Posicion - Marca - CantMuniciones - Alcance (mts) - Calibre (mm) - Estado - Policia Asociado (legajo) - Justificacion Uso - Nivel Arma - TieneSello");
         for (int i = 0; i < armaslargas.size(); i++) {
             if (armaslargas.get(i).getEstado().equals("USO") && armaslargas.get(i).getCalibre() >= 9) {
                 System.out.println(i + " " + armaslargas.get(i).getMarca() + " " + armaslargas.get(i).getCantMuniciones() + " " + armaslargas.get(i).getAlcance() + " " + armaslargas.get(i).getCalibre() + " " + armaslargas.get(i).getEstado() + " " + armaslargas.get(i).getLegajoAsociado() + " " + armaslargas.get(i).getJustifUso() + " " + armaslargas.get(i).getNivelArma() + " " + armaslargas.get(i).isTieneSello());
@@ -452,7 +452,6 @@ public class Main {
     public static void compararArmasLargas(ArrayList<Larga> armaslargas, int comparaArma1, int comparaArma2) {
         System.out.println("Comparando Armas Largas seleccionadas");
         System.out.println("------------------------");
-        //System.out.println("Posicion - Marca - CantMuniciones - Alcance - Calibre - Estado - Justificacion Uso - Nivel Arma - TieneSello");
         if (armaslargas.get(comparaArma1).getNivelArma() > armaslargas.get(comparaArma2).getNivelArma()) {
             System.out.println("El Arma 1, Marca " + armaslargas.get(comparaArma1).getMarca() + " Nivel " + armaslargas.get(comparaArma1).getNivelArma() + " es mayor que el Arma 2, Marca " + armaslargas.get(comparaArma2).getMarca() + " Nivel " + armaslargas.get(comparaArma2).getNivelArma());
         } else {
@@ -463,7 +462,7 @@ public class Main {
     public static void filtro200mtsArmasCortas(ArrayList<Corta> armascortas) {
         System.out.println("Armas Cortas con distancia mayor a 200mts");
         System.out.println("------------------------");
-        System.out.println("Posicion - Marca - CantMuniciones - Alcance - Calibre - Estado - Policia Asociado - esAutomatica");
+        System.out.println("Posicion - Marca - CantMuniciones - Alcance (mts) - Calibre (mm) - Estado - Policia Asociado (legajo) - esAutomatica");
         for (int i = 0; i < armascortas.size(); i++) {
             if (armascortas.get(i).getAlcance() > 200) {
                 System.out.println(i + " " + armascortas.get(i).getMarca() + " " + armascortas.get(i).getCantMuniciones() + " " + armascortas.get(i).getAlcance() + " " + armascortas.get(i).getCalibre() + " " + armascortas.get(i).getEstado() + " " + armascortas.get(i).getLegajoAsociado() + " " + armascortas.get(i).isEsAutomatica());
@@ -489,7 +488,7 @@ public class Main {
                 }
             }
         }
-        if (!resultValidarLegajoAsociado){
+        if (!resultValidarLegajoAsociado) {
             System.out.println("El Policia esta APTO");
         }
         return resultValidarLegajoAsociado;
@@ -505,10 +504,9 @@ public class Main {
                 resultValidarAltaLegajo = true;
             }
         }
-        if (!resultValidarAltaLegajo){
+        if (!resultValidarAltaLegajo) {
             System.out.println("El legajo del Policia no existe");
         }
         return resultValidarAltaLegajo;
     }
-
 }
