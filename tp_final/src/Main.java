@@ -68,7 +68,6 @@ public class Main {
                         System.out.println("Policia dado de Baja correctamente");
                     } else {
                         System.out.println("No existen policias dados de ALTA");
-                        System.out.println(" ");
                     }
                     break;
                 case 3:
@@ -108,7 +107,6 @@ public class Main {
                             System.out.println("Opcion Invalida");
                     } else {
                         System.out.println("No existen policias dados de ALTA");
-                        System.out.println(" ");
                     }
                     break;
                 case 4:
@@ -116,7 +114,6 @@ public class Main {
                         mostrarPolicias(policias);
                     } else {
                         System.out.println("No existen policias dados de ALTA");
-                        System.out.println(" ");
                     }
                     break;
                 case 5:
@@ -186,7 +183,6 @@ public class Main {
                             System.out.println("Arma dada de Baja correctamente");
                         } else {
                             System.out.println("No existen armas cortas dadas de ALTA");
-                            System.out.println(" ");
                         }
                     } else if (tipoArma == 2) {
                         if (!armaslargas.isEmpty()) {
@@ -196,7 +192,6 @@ public class Main {
                             System.out.println("Arma dada de Baja correctamente");
                         } else {
                             System.out.println("No existen armas largas dadas de ALTA");
-                            System.out.println(" ");
                         }
                     } else
                         System.out.println("Opcion Invalida");
@@ -268,7 +263,6 @@ public class Main {
                                 System.out.println("Opcion Invalida");
                         } else {
                             System.out.println("No existen armas cortas dadas de ALTA");
-                            System.out.println(" ");
                         }
                     } else if (tipoArma == 2) {
                         if (!armaslargas.isEmpty()) {
@@ -348,7 +342,6 @@ public class Main {
                                 System.out.println("Opcion Invalida");
                         } else {
                             System.out.println("No existen armas largas dadas de ALTA");
-                            System.out.println(" ");
                         }
                     } else
                         System.out.println("Opcion Invalida");
@@ -358,13 +351,11 @@ public class Main {
                         mostrarArmasCortas(armascortas);
                     } else {
                         System.out.println("No existen armas cortas dadas de ALTA");
-                        System.out.println(" ");
                     }
                     if (!armaslargas.isEmpty()) {
                         mostrarArmasLargas(armaslargas);
                     } else {
                         System.out.println("No existen armas largas dadas de ALTA");
-                        System.out.println(" ");
                     }
                     break;
                 case 9:
@@ -372,13 +363,11 @@ public class Main {
                         validarArmasCortas(armascortas);
                     } else {
                         System.out.println("No existen armas cortas dadas de ALTA");
-                        System.out.println(" ");
                     }
                     if (!armaslargas.isEmpty()) {
                         validarArmasLargas(armaslargas);
                     } else {
                         System.out.println("No existen armas largas dadas de ALTA");
-                        System.out.println(" ");
                     }
                     break;
                 case 10:
@@ -391,7 +380,6 @@ public class Main {
                         compararArmasLargas(armaslargas, comparaArma1, comparaArma2);
                     } else {
                         System.out.println("No hay suficientes armas largas para comparar");
-                        System.out.println(" ");
                     }
                     break;
                 case 11:
@@ -399,7 +387,6 @@ public class Main {
                         filtro200mtsArmasCortas(armascortas);
                     } else {
                         System.out.println("No existen armas cortas dadas de ALTA");
-                        System.out.println(" ");
                     }
                     break;
                 case 12:
@@ -410,6 +397,7 @@ public class Main {
                     break;
             }
         } while (opcion != 12);
+        sc.close();
     }
 
     public static void mostrarPolicias(ArrayList<Policia> policias) {
@@ -419,7 +407,6 @@ public class Main {
         for (int i = 0; i < policias.size(); i++) {
             System.out.println(i + " " + policias.get(i).getNombre() + " " + policias.get(i).getApellido() + " " + policias.get(i).getLegajo());
         }
-        System.out.println(" ");
     }
 
     public static void mostrarArmasCortas(ArrayList<Corta> armascortas) {
@@ -429,7 +416,6 @@ public class Main {
         for (int i = 0; i < armascortas.size(); i++) {
             System.out.println(i + " " + armascortas.get(i).getMarca() + " " + armascortas.get(i).getCantMuniciones() + " " + armascortas.get(i).getAlcance() + " " + armascortas.get(i).getCalibre() + " " + armascortas.get(i).getEstado() + " " + armascortas.get(i).getLegajoAsociado() + " " + armascortas.get(i).isEsAutomatica());
         }
-        System.out.println(" ");
     }
 
     public static void mostrarArmasLargas(ArrayList<Larga> armaslargas) {
@@ -439,7 +425,6 @@ public class Main {
         for (int i = 0; i < armaslargas.size(); i++) {
             System.out.println(i + " " + armaslargas.get(i).getMarca() + " " + armaslargas.get(i).getCantMuniciones() + " " + armaslargas.get(i).getAlcance() + " " + armaslargas.get(i).getCalibre() + " " + armaslargas.get(i).getEstado() + " " + armaslargas.get(i).getLegajoAsociado() + " " + armaslargas.get(i).getJustifUso() + " " + armaslargas.get(i).getNivelArma() + " " + armaslargas.get(i).isTieneSello());
         }
-        System.out.println(" ");
     }
 
     public static void validarArmasCortas(ArrayList<Corta> armascortas) {
@@ -451,7 +436,6 @@ public class Main {
                 System.out.println(i + " " + armascortas.get(i).getMarca() + " " + armascortas.get(i).getCantMuniciones() + " " + armascortas.get(i).getAlcance() + " " + armascortas.get(i).getCalibre() + " " + armascortas.get(i).getEstado() + " " + armascortas.get(i).getLegajoAsociado() + " " + armascortas.get(i).isEsAutomatica());
             }
         }
-        System.out.println(" ");
     }
 
     public static void validarArmasLargas(ArrayList<Larga> armaslargas) {
@@ -463,7 +447,6 @@ public class Main {
                 System.out.println(i + " " + armaslargas.get(i).getMarca() + " " + armaslargas.get(i).getCantMuniciones() + " " + armaslargas.get(i).getAlcance() + " " + armaslargas.get(i).getCalibre() + " " + armaslargas.get(i).getEstado() + " " + armaslargas.get(i).getLegajoAsociado() + " " + armaslargas.get(i).getJustifUso() + " " + armaslargas.get(i).getNivelArma() + " " + armaslargas.get(i).isTieneSello());
             }
         }
-        System.out.println(" ");
     }
 
     public static void compararArmasLargas(ArrayList<Larga> armaslargas, int comparaArma1, int comparaArma2) {
@@ -475,7 +458,6 @@ public class Main {
         } else {
             System.out.println("El Arma 2, Marca " + armaslargas.get(comparaArma2).getMarca() + " Nivel " + armaslargas.get(comparaArma2).getNivelArma() + " es mayor que el Arma 1, Marca " + armaslargas.get(comparaArma1).getMarca() + " Nivel " + armaslargas.get(comparaArma1).getNivelArma());
         }
-        System.out.println(" ");
     }
 
     public static void filtro200mtsArmasCortas(ArrayList<Corta> armascortas) {
@@ -487,7 +469,6 @@ public class Main {
                 System.out.println(i + " " + armascortas.get(i).getMarca() + " " + armascortas.get(i).getCantMuniciones() + " " + armascortas.get(i).getAlcance() + " " + armascortas.get(i).getCalibre() + " " + armascortas.get(i).getEstado() + " " + armascortas.get(i).getLegajoAsociado() + " " + armascortas.get(i).isEsAutomatica());
             }
         }
-        System.out.println(" ");
     }
 
     public static boolean validarLegajoAsociado(ArrayList<Corta> armascortas, ArrayList<Larga> armaslargas, int legajoAsociado) {

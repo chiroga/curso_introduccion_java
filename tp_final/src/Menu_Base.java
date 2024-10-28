@@ -1,5 +1,6 @@
 public class Menu_Base {
     public void menu_inicial (){
+        System.out.println(" ");
         System.out.println("------------------------");
         System.out.println("SELECCIONE UNA OPCION");
         System.out.println("------------------------");
