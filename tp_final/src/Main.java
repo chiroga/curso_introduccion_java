@@ -151,7 +151,7 @@ public class Main {
                             } else {
                                 System.out.println("No se pudo agregar el arma");
                             }
-                        } else if (tipoArma == 2) {
+                        } else {
                             saltoDeLinea = sc.nextLine();
                             System.out.println("Ingrese Justificacion de Uso: ");
                             justifUso = sc.nextLine();
@@ -498,8 +498,6 @@ public class Main {
             if (armascortas.get(i).getLegajoAsociado() == legajoAsociado) {
                 System.out.println("El Policia (legajo " + legajoAsociado + ") ya posee un arma asignada");
                 resultValidarLegajoAsociado = true;
-            } else {
-                resultValidarLegajoAsociado = false;
             }
         }
         if (!resultValidarLegajoAsociado) {
@@ -507,8 +505,6 @@ public class Main {
                 if (armaslargas.get(i).getLegajoAsociado() == legajoAsociado) {
                     System.out.println("El Policia (legajo " + legajoAsociado + ") ya posee un arma asignada");
                     resultValidarLegajoAsociado = true;
-                } else {
-                    resultValidarLegajoAsociado = false;
                 }
             }
         }
@@ -526,8 +522,6 @@ public class Main {
             if (policias.get(i).getLegajo() == legajo) {
                 System.out.println("El legajo " + legajo + " existe");
                 resultValidarAltaLegajo = true;
-            } else {
-                resultValidarAltaLegajo = false;
             }
         }
         if (!resultValidarAltaLegajo){
